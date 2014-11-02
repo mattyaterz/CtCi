@@ -1,4 +1,4 @@
-package com.github.yaterz.ctci.ctci.ci;
+package com.github.yaterz.ctci.ci;
 
 import java.nio.charset.Charset;
 import java.util.Arrays;

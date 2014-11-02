@@ -1,6 +1,5 @@
 package com.github.yaterz.ctci.ci;
 
-import com.github.yaterz.ctci.ctci.ci.ChapterOneExerciseOneSolution;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Assert;
@@ -13,7 +12,7 @@ import org.junit.runners.Parameterized.Parameters;
  * @author mattyaterz
  * @since 11/2/14
  */
-@RunWith(Parameterized.class) public class ChapterOneExerciseOneTest {
+@RunWith( Parameterized.class ) public class ChapterOneExerciseOneTest {
     @Parameters public static Collection<Object[]> testCases() {
         return Arrays.asList(
                 new Object[] { "123abcABCȧḃċÁƁĆ",false },
