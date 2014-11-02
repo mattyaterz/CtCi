@@ -15,6 +15,8 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith( Parameterized.class ) public class ChapterOneExerciseOneTest {
     @Parameters public static Collection<Object[]> testCases() {
         return Arrays.asList(
+                new Object[] { null, false },
+                new Object[] { "", false },
                 new Object[] { "123abcABCȧḃċÁƁĆ",false },
                 new Object[] { "theQuickBrownFOxJUmps0vERTH3LazyD()g", false },
                 new Object[] { " s p a c e s ", true },

@@ -12,6 +12,10 @@ import java.util.Arrays;
  */
 public class ChapterOneExerciseOneSolution {
     public static boolean isAnyCharRepeated( String str ) {
+        if ( str == null ) {
+            return false;
+        }
+
         boolean[] charsetCharacters = new boolean[ getCharsInSet( Charset.defaultCharset() ) ];
 
         for ( char character : str.toCharArray() ) {
@@ -26,6 +30,10 @@ public class ChapterOneExerciseOneSolution {
     }
 
     public static boolean isAnyCharRepeatedSort( String str ) {
+        if ( str == null ) {
+            return false;
+        }
+
         char[] chars = str.toCharArray();
         Arrays.sort( chars );
 
