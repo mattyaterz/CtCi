@@ -7,7 +7,7 @@ import java.util.Arrays;
  *
  * I am assuming no exceptions, i.e. case sensitivity, special characters (e.g. spaces) all count
  *
- * @author Matt Yates
+ * @author mattyaterz
  * @since 11/2/14
  */
 public class ChapterOneExerciseThreeSolution {
