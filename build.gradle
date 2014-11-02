@@ -1,0 +1,39 @@
+version = '0.1-SNAPSHOT'
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+sourceCompatibility = '1.7'
+targetCompatibility = '1.7'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
+
+test {
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        exceptionFormat = 'full'
+        showCauses = true
+        showExceptions = true
+        showStackTraces = true
+    }
+}
+
+apply plugin: 'idea'
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = sourceSets.main.output.classesDir
+        testOutputDir = sourceSets.test.output.classesDir
+    }
+}
+
+task wrapper( type: Wrapper ) {
+    gradleVersion = '2.1'
+}
