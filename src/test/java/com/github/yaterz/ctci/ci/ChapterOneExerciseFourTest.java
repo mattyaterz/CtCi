@@ -13,19 +13,19 @@ import org.junit.runners.Parameterized.Parameters;
  * @since 11/2/14
  */
 @RunWith( Parameterized.class ) public class ChapterOneExerciseFourTest {
-    @Parameters public static Collection<Object[]> testData() {
+    @Parameters public static Collection<String[]> testData() {
         return Arrays.asList(
-                new Object[] { "Mr John Smith\0\0\0\0".toCharArray(), "Mr%20John%20Smith".toCharArray() },
-                new Object[] { " test \0\0\0\0".toCharArray(), "%20test%20".toCharArray() },
-                new Object[] { "testNoSpaces".toCharArray(), "testNoSpaces".toCharArray() },
-                new Object[] { new char[0], new char[0] },
-                new Object[] { null, null }
+                new String[] { "Mr John Smith\0\0\0\0", "Mr%20John%20Smith" },
+                new String[] { " test \0\0\0\0", "%20test%20" },
+                new String[] { "testNoSpaces", "testNoSpaces" },
+                new String[] { "", "" },
+                new String[] { null, null }
         );
     }
 
-    public ChapterOneExerciseFourTest( char[] regularSpaces, char[] urlEncodedSpaces ) {
-        this.regularSpaces = regularSpaces;
-        this.urlEncodedSpaces = urlEncodedSpaces;
+    public ChapterOneExerciseFourTest( String regularSpaces, String urlEncodedSpaces ) {
+        this.regularSpaces = regularSpaces != null ? regularSpaces.toCharArray() : null;
+        this.urlEncodedSpaces = urlEncodedSpaces != null ? urlEncodedSpaces.toCharArray() : null;
     }
 
     @Test public void testSpaceEncoding() {
