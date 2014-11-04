@@ -7,7 +7,7 @@ package com.github.yaterz.ctci.ci;
  * @since 11/2/14
  */
 public class ChapterOneExerciseSixSolution {
-    public static void rotateRightNinety( int[][] image ) {
+    public static void rotateNinety( int[][] image, boolean directionRight ) {
         if ( image == null ) {
             return;
         }
@@ -26,17 +26,29 @@ public class ChapterOneExerciseSixSolution {
             int max = image.length - min - 1;
 
             for ( int pos = 0; pos < max - min; pos++ ) {
-                int tmp[] = {
-                        image[ min ][ min + pos ],
-                        image[ min + pos ][ max ],
-                        image[ max ][ max - pos ],
-                        image[ max - pos ][ min ]
-                };
+                //save top
+                int tmp = image[ min ][ min + pos ];
 
-                image[ min + pos ][ max ] = tmp[ 0 ];
-                image[ max ][ max - pos ] = tmp[ 1 ];
-                image[ max - pos ][ min ] = tmp[ 2 ];
-                image[ min ][ min + pos ] = tmp[ 3 ];
+                if ( directionRight ) {
+                    //move left to top
+                    image[ min ][ min + pos ] = image[ max - pos ][ min ];
+                    //move bottom to left
+                    image[ max - pos ][ min ] = image[ max ][ max - pos ];
+                    //move right to bottom
+                    image[ max ][ max - pos ] = image[ min + pos ][ max ];
+                    //move top to right
+                    image[ min + pos ][ max ] = tmp;
+                }
+                else {
+                    //move right to top
+                    image[ min ][ min + pos ] = image[ min + pos ][ max ];
+                    //move bottom to right
+                    image[ min + pos ][ max ] = image[ max ][ max - pos ];
+                    //move left to bottom
+                    image[ max ][ max - pos ] = image[ max - pos ][ min ];
+                    //move top to left
+                    image[ max - pos ][ min ] = tmp;
+                }
             }
         }
     }
