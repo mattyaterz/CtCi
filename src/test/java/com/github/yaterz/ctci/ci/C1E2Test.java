@@ -12,8 +12,8 @@ import org.junit.runners.Parameterized.Parameters;
  * @author mattyaterz
  * @since 11/2/14
  */
-@RunWith( Parameterized.class ) public class ChapterOneExerciseTwoTest {
-    @Parameters public static Collection<String[]> testCases() {
+@RunWith( Parameterized.class ) public class C1E2Test {
+    @Parameters public static Collection<String[]> testData() {
         return Arrays.asList(
                 new String[] { "abcdefghijklmnopqrstuvwxyz", "zyxwvutsrqponmlkjihgfedcba" },
                 new String[] { "", "" },
@@ -21,13 +21,13 @@ import org.junit.runners.Parameterized.Parameters;
         );
     }
 
-    public ChapterOneExerciseTwoTest( String str, String reversedStr ) {
+    public C1E2Test( String str, String reversedStr ) {
         this.str = str != null ? str.toCharArray() : null;
         this.reversedStr = reversedStr != null ? reversedStr.toCharArray() : null;
     }
 
     @Test public void testForRepeatedCharacters() {
-        ChapterOneExerciseTwoSolution.reverseString( str );
+        C1E2Solution.reverseString( str );
         Assert.assertArrayEquals( reversedStr, str );
     }
 

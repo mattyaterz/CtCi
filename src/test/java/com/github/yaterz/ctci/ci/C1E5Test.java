@@ -12,7 +12,7 @@ import org.junit.runners.Parameterized.Parameters;
  * @author mattyaterz
  * @since 11/2/14
  */
-@RunWith( Parameterized.class ) public class ChapterOneExerciseFiveTest {
+@RunWith( Parameterized.class ) public class C1E5Test {
     @Parameters public static Collection<String[]> testData() {
         return Arrays.asList(
                 new String[] { "aabcccccaaa", "a2b1c5a3" },
@@ -23,13 +23,13 @@ import org.junit.runners.Parameterized.Parameters;
         );
     }
 
-    public ChapterOneExerciseFiveTest( String input, String output ) {
+    public C1E5Test( String input, String output ) {
         this.input = input != null ? input.toCharArray() : null;
         this.output = output != null ? output.toCharArray() : null;
     }
 
     @Test public void testSimpleCompression() {
-        Assert.assertArrayEquals( output, ChapterOneExerciseFiveSolution.getRepeatCompressedString( input ) );
+        Assert.assertArrayEquals( output, C1E5Solution.getRepeatCompressedString( input ) );
     }
 
     char[] input;

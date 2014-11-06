@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @author mattyaterz
  * @since 11/2/14
  */
-public class ChapterOneExerciseOneSolution {
+public class C1E1Solution {
     public static boolean isAnyCharRepeated( String str ) {
         if ( str == null ) {
             return false;

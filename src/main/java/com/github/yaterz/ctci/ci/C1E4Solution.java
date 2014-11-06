@@ -6,7 +6,7 @@ package com.github.yaterz.ctci.ci;
  * @author mattyaterz
  * @since 11/2/14
  */
-public class ChapterOneExerciseFourSolution {
+public class C1E4Solution {
     // assumes the length of 'str' is exactly what you need to expand the spaces
     public static void urlEncodeSpaces( char[] str ) {
         if ( str == null ) {

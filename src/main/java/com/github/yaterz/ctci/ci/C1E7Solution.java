@@ -6,7 +6,7 @@ package com.github.yaterz.ctci.ci;
  * @author mattyaterz
  * @since 11/5/14
  */
-public class ChapterOneExerciseSevenSolution {
+public class C1E7Solution {
     public static void matrixNullifier( int[][] matrix ) {
         if ( matrix == null || matrix.length == 0 || matrix[0].length == 0 ) {
             return;

@@ -6,7 +6,7 @@ package com.github.yaterz.ctci.ci;
  * @author mattyaterz
  * @since 11/2/14
  */
-public class ChapterOneExerciseSixSolution {
+public class C1E6Solution {
     public static void rotateNinety( int[][] image, boolean directionRight ) {
         if ( image == null ) {
             return;

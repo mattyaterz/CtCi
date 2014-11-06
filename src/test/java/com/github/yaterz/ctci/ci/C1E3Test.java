@@ -12,7 +12,7 @@ import org.junit.runners.Parameterized.Parameters;
  * @author mattyaterz
  * @since 11/2/14
  */
-@RunWith( Parameterized.class )public class ChapterOneExerciseThreeTest {
+@RunWith( Parameterized.class )public class C1E3Test {
     @Parameters public static Collection<Object[]> testData() {
         return Arrays.asList(
                 new Object[] { "The Quick Brown Fox Jumps Over The Lazy Dog", "The Quick Brown Fox Jumps Over The Lazy Dog", true },
@@ -28,15 +28,15 @@ import org.junit.runners.Parameterized.Parameters;
         );
     }
 
-    public ChapterOneExerciseThreeTest( String first, String second, boolean isPermutation ) {
+    public C1E3Test( String first, String second, boolean isPermutation ) {
         this.first = first;
         this.second = second;
         this.isPermutation = isPermutation;
     }
 
     @Test public void testIsPermutation() {
-        Assert.assertEquals( isPermutation, ChapterOneExerciseThreeSolution.isPermutation( first, second ) );
-        Assert.assertEquals( isPermutation, ChapterOneExerciseThreeSolution.isPermutation( second, first ) );
+        Assert.assertEquals( isPermutation, C1E3Solution.isPermutation( first, second ) );
+        Assert.assertEquals( isPermutation, C1E3Solution.isPermutation( second, first ) );
     }
 
     String first;

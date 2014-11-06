@@ -9,7 +9,7 @@ package com.github.yaterz.ctci.ci;
  * @author mattyaterz
  * @since 11/2/14
  */
-public class ChapterOneExerciseFiveSolution {
+public class C1E5Solution {
     public static char[] getRepeatCompressedString( char[] str ) {
         if ( str == null ) {
             return null;

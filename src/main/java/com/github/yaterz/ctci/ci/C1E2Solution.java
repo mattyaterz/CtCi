@@ -7,7 +7,7 @@ package com.github.yaterz.ctci.ci;
  * @author mattyaterz
  * @since 11/2/14
  */
-public class ChapterOneExerciseTwoSolution {
+public class C1E2Solution {
     public static void reverseString( char[] str ) { // would be char* str
         if ( str == null ) {
             return;

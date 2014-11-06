@@ -12,7 +12,7 @@ import org.junit.runners.Parameterized.Parameters;
  * @author mattyaterz
  * @since 11/2/14
  */
-@RunWith( Parameterized.class ) public class ChapterOneExerciseSixTest {
+@RunWith( Parameterized.class ) public class C1E6Test {
     @Parameters public static Collection<Object[]> testData() {
         return Arrays.asList(
                 new Object[] {
@@ -146,14 +146,14 @@ import org.junit.runners.Parameterized.Parameters;
         );
     }
 
-    public ChapterOneExerciseSixTest( int[][] startMatrix, int[][] rotatedMatrix, boolean rotateRight ) {
+    public C1E6Test( int[][] startMatrix, int[][] rotatedMatrix, boolean rotateRight ) {
         this.startMatrix = startMatrix;
         this.rotatedMatrix = rotatedMatrix;
         this.rotateRight = rotateRight;
     }
 
     @Test public void testRotateMatrixRight() {
-        ChapterOneExerciseSixSolution.rotateNinety( startMatrix, rotateRight );
+        C1E6Solution.rotateNinety( startMatrix, rotateRight );
 
         for ( int row = 0; row < startMatrix.length; row++ ) {
             Assert.assertArrayEquals( rotatedMatrix[ row ], startMatrix[ row ] );

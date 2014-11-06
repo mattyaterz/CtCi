@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @author mattyaterz
  * @since 11/2/14
  */
-public class ChapterOneExerciseThreeSolution {
+public class C1E3Solution {
     public static boolean isPermutation( String first, String second ) {
         if ( first == null || second == null ) {
             return false;
