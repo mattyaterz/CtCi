@@ -8,15 +8,10 @@ public class SingleLinkedNode {
     public SingleLinkedNode() {
     }
 
-    public SingleLinkedNode( Object element ) {
+    public SingleLinkedNode( int element ) {
         this.element = element;
     }
 
-    public SingleLinkedNode( Object element, SingleLinkedNode next ) {
-        this.element = element;
-        this.next = next;
-    }
-
-    public Object element;
+    public int element;
     public SingleLinkedNode next;
 }

@@ -19,8 +19,7 @@ public class C2E1Solution {
             runner = current;
 
             while ( runner.next != null ) {
-                if ( current.element == runner.next.element ||
-                        ( current.element != null && current.equals( runner.next.element ) ) ) {
+                if ( current.element == runner.next.element ) {
                     runner.next = runner.next.next;
                 }
                 else {
