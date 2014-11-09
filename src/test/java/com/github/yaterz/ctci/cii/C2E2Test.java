@@ -11,7 +11,7 @@ import org.junit.runners.Parameterized.Parameters;
 import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
 
 /**
- * @author Matt Yates
+ * @author mattyaterz
  * @since 11/8/14
  */
 @RunWith( Parameterized.class ) public class C2E2Test {
