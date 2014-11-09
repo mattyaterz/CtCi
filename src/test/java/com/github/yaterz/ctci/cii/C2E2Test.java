@@ -45,6 +45,15 @@ import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
         }
     }
 
+    @Test public void testGetFromEndRecursive() {
+        if ( node == null ) {
+            Assert.assertNull( C2E2Solution.getFromEndRecursive( list, reverseOffset ) );
+        }
+        else {
+            Assert.assertEquals( node.element, C2E2Solution.getFromEndRecursive( list, reverseOffset ).element );
+        }
+    }
+
     SingleLinkedNode list;
     SingleLinkedNode node;
     int reverseOffset;

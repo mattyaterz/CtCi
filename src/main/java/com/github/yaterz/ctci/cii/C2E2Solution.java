@@ -32,4 +32,36 @@ public class C2E2Solution {
 
         return current;
     }
+
+    public static SingleLinkedNode getFromEndRecursive( SingleLinkedNode node, int reverseOffset ) {
+        if ( node == null ) {
+            return null;
+        }
+
+        return getPositionFromEnd( node, reverseOffset, new Position( 0 ) );
+    }
+
+    static SingleLinkedNode getPositionFromEnd( SingleLinkedNode first, int reverseOffset, Position pos ) {
+        if ( first == null ) {
+            pos.position = -1;
+            return null;
+        }
+
+        SingleLinkedNode node = getPositionFromEnd( first.next, reverseOffset, pos );
+        pos.position += 1;
+
+        if ( pos.position == reverseOffset ) {
+            return first;
+        }
+
+        return node;
+    }
+
+    static class Position {
+        Position( int position ) {
+            this.position = position;
+        }
+
+        int position;
+    }
 }
