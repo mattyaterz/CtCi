@@ -40,4 +40,12 @@ public class C2TestUtils {
 
         return array;
     }
+
+    public static SingleLinkedNode getAtIndex( SingleLinkedNode list, int offset ) {
+        if ( offset == 0 || list == null ) {
+            return list;
+        }
+
+        return getAtIndex( list.next, --offset );
+    }
 }
