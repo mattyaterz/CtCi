@@ -1,6 +1,8 @@
 package com.github.yaterz.ctci.cii;
 
 /**
+ * Delete a node in the middle of a singly linked list given the node to delete (not the head of the list)
+ *
  * @author mattyaterz
  * @since 11/8/14
  */
