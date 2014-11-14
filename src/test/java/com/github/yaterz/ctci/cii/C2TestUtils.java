@@ -17,6 +17,25 @@ public class C2TestUtils {
         return head.next;
     }
 
+    public static SingleLinkedNode asLoopedList( int[] array, int loopIndex ) {
+        SingleLinkedNode head = new SingleLinkedNode();
+        SingleLinkedNode current = head;
+        SingleLinkedNode loop = null;
+
+        for ( int i = 0; i < array.length; i++ ) {
+            current.next = new SingleLinkedNode( array[ i ] );
+
+            if ( i == loopIndex ) {
+                loop = current.next;
+            }
+
+            current = current.next;
+        }
+
+        current.next = loop;
+        return head.next;
+    }
+
     public static Object[] asArray( SingleLinkedNode node ) {
         if ( node == null ) {
             return new Object[0];
