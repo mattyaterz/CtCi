@@ -5,7 +5,7 @@ package com.github.yaterz.ctci.cii;
  * @since 11/8/14
  */
 public class C2TestUtils {
-    public static SingleLinkedNode asLinkedList( int[] array ) {
+    public static SingleLinkedNode asLinkedList( int... array ) {
         SingleLinkedNode head = new SingleLinkedNode();
         SingleLinkedNode current = head;
 
@@ -17,7 +17,7 @@ public class C2TestUtils {
         return head.next;
     }
 
-    public static SingleLinkedNode asLoopedList( int[] array, int loopIndex ) {
+    public static SingleLinkedNode asLoopedList( int loopIndex, int... array ) {
         SingleLinkedNode head = new SingleLinkedNode();
         SingleLinkedNode current = head;
         SingleLinkedNode loop = null;

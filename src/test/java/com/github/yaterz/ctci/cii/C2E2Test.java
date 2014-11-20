@@ -21,11 +21,11 @@ import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
             new Object[] { null, 1, null },
             new Object[] { new SingleLinkedNode( 0 ), 0, new SingleLinkedNode( 0 ) },
             new Object[] { new SingleLinkedNode( 0 ), 2, null },
-            new Object[] { asLinkedList( new int[] { 0, 1, 2, 3, 4 } ),
+            new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
                            2, new SingleLinkedNode( 2 ) },
-            new Object[] { asLinkedList( new int[] { 0, 1, 2, 3, 4 } ),
+            new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
                            0, new SingleLinkedNode( 4 ) },
-            new Object[] { asLinkedList( new int[] { 0, 1, 2, 3, 4 } ),
+            new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
                            4, new SingleLinkedNode( 0 ) }
         );
     }

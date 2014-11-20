@@ -19,16 +19,16 @@ import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
     @Parameters public static Collection<Object[]> testData() {
         return Arrays.asList(
                 new Object[] { null, 0, null },
-                new Object[] { asLinkedList( new int[] { 0, 1, 2, 3, 4 } ),
-                               2, asLinkedList( new int[] { 0, 1, 2, 3, 4 } ) },
-                new Object[] { asLinkedList( new int[] { 4, 3, 2, 1, 0 } ),
-                               2, asLinkedList( new int[] { 1, 0, 4, 3, 2 } ) },
-                new Object[] { asLinkedList( new int[] { 2, 0, 3, 1, 4 } ),
-                               2, asLinkedList( new int[] { 0, 1, 2, 3, 4 } ) },
-                new Object[] { asLinkedList( new int[] { 4, 3, 2, 1, 0 } ),
-                               5, asLinkedList( new int[] { 4, 3, 2, 1, 0 } ) },
-                new Object[] { asLinkedList( new int[] { 4, 3, 2, 1, 0 } ),
-                               0, asLinkedList( new int[] { 4, 3, 2, 1, 0 } ) }
+                new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
+                               2, asLinkedList( 0, 1, 2, 3, 4 ) },
+                new Object[] { asLinkedList( 4, 3, 2, 1, 0 ),
+                               2, asLinkedList( 1, 0, 4, 3, 2 ) },
+                new Object[] { asLinkedList( 2, 0, 3, 1, 4 ),
+                               2, asLinkedList( 0, 1, 2, 3, 4 ) },
+                new Object[] { asLinkedList( 4, 3, 2, 1, 0 ),
+                               5, asLinkedList( 4, 3, 2, 1, 0 ) },
+                new Object[] { asLinkedList( 4, 3, 2, 1, 0 ),
+                               0, asLinkedList( 4, 3, 2, 1, 0 ) }
         );
     }
 

@@ -20,20 +20,20 @@ import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
         return Arrays.asList(
             new Object[] { null, null },
             new Object[] { new SingleLinkedNode(), new SingleLinkedNode() },
-            new Object[] { asLinkedList( new int[] { 0, 1, 2, 3, 4 } ),
-                           asLinkedList( new int[] { 0, 1, 2, 3, 4 } ) },
-            new Object[] { asLinkedList( new int[] { 0, 0, 1, 2, 3 } ),
-                           asLinkedList( new int[] { 0, 1, 2, 3 } ) },
-            new Object[] { asLinkedList( new int[] { 0, 1, 1, 2, 3 } ),
-                           asLinkedList( new int[] { 0, 1, 2, 3 } ) },
-            new Object[] { asLinkedList( new int[] { 0, 1, 2, 3, 3 } ),
-                           asLinkedList( new int[] { 0, 1, 2, 3 } ) },
-            new Object[] { asLinkedList( new int[] { 0, 0, 0, 1, 1, 2, 3 } ),
-                           asLinkedList( new int[] { 0, 1, 2, 3 } ) },
-            new Object[] { asLinkedList( new int[] { 3, 0, 1, 2, 0, 1, 0 } ),
-                           asLinkedList( new int[] { 3, 0, 1, 2 } ) },
-            new Object[] { asLinkedList( new int[] { 0, 0, 0, 0, 0 } ),
-                           asLinkedList( new int[] { 0 } ) }
+            new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
+                           asLinkedList( 0, 1, 2, 3, 4 ) },
+            new Object[] { asLinkedList( 0, 0, 1, 2, 3 ),
+                           asLinkedList( 0, 1, 2, 3 ) },
+            new Object[] { asLinkedList( 0, 1, 1, 2, 3 ),
+                           asLinkedList( 0, 1, 2, 3 ) },
+            new Object[] { asLinkedList( 0, 1, 2, 3, 3 ),
+                           asLinkedList( 0, 1, 2, 3 ) },
+            new Object[] { asLinkedList( 0, 0, 0, 1, 1, 2, 3 ),
+                           asLinkedList( 0, 1, 2, 3 ) },
+            new Object[] { asLinkedList( 3, 0, 1, 2, 0, 1, 0 ),
+                           asLinkedList( 3, 0, 1, 2 ) },
+            new Object[] { asLinkedList( 0, 0, 0, 0, 0 ),
+                           asLinkedList( 0 ) }
         );
     }
 

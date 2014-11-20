@@ -19,13 +19,13 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith( Parameterized.class ) public class C2E6Test {
     @Parameters public static Collection<Object[]> testData() {
-        SingleLinkedNode first = asLoopedList( new int[] { 0, 1, 2, 3, 4 }, 0 );
-        SingleLinkedNode middle = asLoopedList( new int[] { 0, 1, 2, 3, 4 }, 2 );
-        SingleLinkedNode last = asLoopedList( new int[] { 0, 1, 2, 3, 4 }, 4 );
+        SingleLinkedNode first = asLoopedList( 0, 0, 1, 2, 3, 4 );
+        SingleLinkedNode middle = asLoopedList( 2, 0, 1, 2, 3, 4 );
+        SingleLinkedNode last = asLoopedList( 4, 0, 1, 2, 3, 4 );
 
         return Arrays.asList(
             new Object[] { null, null },
-            new Object[] { asLinkedList( new int[] { 0, 1, 2, 3, 4 } ), null },
+            new Object[] { asLinkedList( 0, 1, 2, 3, 4 ), null },
             new Object[] { first, getAtIndex( first, 0 ) },
             new Object[] { middle, getAtIndex( middle, 2 )},
             new Object[] { last, getAtIndex( last, 4 ) }

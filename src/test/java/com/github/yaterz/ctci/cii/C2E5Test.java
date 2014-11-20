@@ -28,12 +28,12 @@ import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
                 new SingleLinkedNode( 2 ), null, new SingleLinkedNode( 2 ), new SingleLinkedNode( 2 )
             },
             new Object[] {
-                asLinkedList( new int[] { 7, 1, 6 } ), asLinkedList( new int[] { 5, 9, 2 } ),
-                asLinkedList( new int[] { 2, 1, 9 } ), asLinkedList( new int[] { 1, 3, 0, 8 } )
+                asLinkedList( 7, 1, 6 ), asLinkedList( 5, 9, 2 ),
+                asLinkedList( 2, 1, 9 ), asLinkedList( 1, 3, 0, 8 )
             },
             new Object[] {
-                asLinkedList( new int[] { 6, 1, 7 } ), asLinkedList( new int[] { 2, 9, 5} ),
-                asLinkedList( new int[] { 8, 0, 3, 1 } ), asLinkedList( new int[] { 9, 1, 2 } )
+                asLinkedList( 6, 1, 7 ), asLinkedList( 2, 9, 5 ),
+                asLinkedList( 8, 0, 3, 1 ), asLinkedList( 9, 1, 2 )
             }
         );
     }

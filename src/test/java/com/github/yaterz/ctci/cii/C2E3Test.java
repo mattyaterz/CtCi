@@ -21,12 +21,12 @@ import static com.github.yaterz.ctci.cii.C2TestUtils.getAtIndex;
         return Arrays.asList(
                 new Object[] { null, 0, null },
 //                new Object[] { new SingleLinkedNode( 0 ), 0, null },
-                new Object[] { asLinkedList( new int[] { 0, 1, 2, 3, 4 } ),
-                               2, asLinkedList( new int[] { 0, 1, 3, 4 } ) },
-                new Object[] { asLinkedList( new int[] { 0, 1, 2, 3, 4 } ),
-                               0, asLinkedList( new int[] { 1, 2, 3, 4 } ) }//,
-//                new Object[] { asLinkedList( new int[] { 0, 1, 2, 3, 4 } ),
-//                               4, asLinkedList( new int[] { 0, 1, 2, 3 } ) }
+                new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
+                               2, asLinkedList( 0, 1, 3, 4 ) },
+                new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
+                               0, asLinkedList( 1, 2, 3, 4 ) }//,
+//                new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
+//                               4, asLinkedList( 0, 1, 2, 3 ) }
         );
     }
 
