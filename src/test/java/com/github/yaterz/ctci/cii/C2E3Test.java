@@ -1,5 +1,6 @@
 package com.github.yaterz.ctci.cii;
 
+import com.github.yaterz.ctci.SingleLinkedNode;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Assert;
@@ -8,9 +9,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static com.github.yaterz.ctci.cii.C2TestUtils.asArray;
-import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
-import static com.github.yaterz.ctci.cii.C2TestUtils.getAtIndex;
+import static com.github.yaterz.ctci.LinkedTestUtils.asArray;
+import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
+import static com.github.yaterz.ctci.LinkedTestUtils.getAtIndex;
 
 /**
  * @author mattyaterz

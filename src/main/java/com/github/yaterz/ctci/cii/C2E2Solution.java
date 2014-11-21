@@ -1,5 +1,7 @@
 package com.github.yaterz.ctci.cii;
 
+import com.github.yaterz.ctci.SingleLinkedNode;
+
 /**
  * Find the kth to last element in a singly linked list
  *

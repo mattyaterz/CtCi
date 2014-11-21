@@ -1,5 +1,7 @@
 package com.github.yaterz.ctci.cii;
 
+import com.github.yaterz.ctci.SingleLinkedNode;
+
 /**
  * Partition a linked list around a value X
  * I.e. - the values less than X come before all the values greater than or equal to X

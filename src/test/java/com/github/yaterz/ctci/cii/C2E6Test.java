@@ -4,6 +4,7 @@ package com.github.yaterz.ctci.cii;
  * @author mattyaterz
  * @since 11/9/14
  */
+import com.github.yaterz.ctci.SingleLinkedNode;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Test;
@@ -12,9 +13,9 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import static com.github.yaterz.ctci.cii.C2E6Solution.findLoop;
-import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
-import static com.github.yaterz.ctci.cii.C2TestUtils.asLoopedList;
-import static com.github.yaterz.ctci.cii.C2TestUtils.getAtIndex;
+import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
+import static com.github.yaterz.ctci.LinkedTestUtils.asLoopedList;
+import static com.github.yaterz.ctci.LinkedTestUtils.getAtIndex;
 import static org.junit.Assert.assertEquals;
 
 @RunWith( Parameterized.class ) public class C2E6Test {

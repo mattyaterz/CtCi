@@ -1,5 +1,7 @@
 package com.github.yaterz.ctci.cii;
 
+import com.github.yaterz.ctci.SingleLinkedNode;
+
 /**
  * Delete a node in the middle of a singly linked list given the node to delete (not the head of the list)
  *

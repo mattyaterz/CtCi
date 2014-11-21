@@ -1,4 +1,4 @@
-package com.github.yaterz.ctci.cii;
+package com.github.yaterz.ctci;
 
 /**
  * @author mattyaterz
@@ -6,6 +6,7 @@ package com.github.yaterz.ctci.cii;
  */
 public class SingleLinkedNode {
     public SingleLinkedNode() {
+
     }
 
     public SingleLinkedNode( int element ) {

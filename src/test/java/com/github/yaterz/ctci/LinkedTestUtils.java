@@ -1,10 +1,10 @@
-package com.github.yaterz.ctci.cii;
+package com.github.yaterz.ctci;
 
 /**
  * @author mattyaterz
  * @since 11/8/14
  */
-public class C2TestUtils {
+public class LinkedTestUtils {
     public static SingleLinkedNode asLinkedList( int... array ) {
         SingleLinkedNode head = new SingleLinkedNode();
         SingleLinkedNode current = head;

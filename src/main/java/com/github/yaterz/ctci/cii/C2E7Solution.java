@@ -1,5 +1,8 @@
 package com.github.yaterz.ctci.cii;
 
+import com.github.yaterz.ctci.LinkedStack;
+import com.github.yaterz.ctci.SingleLinkedNode;
+
 /**
  * Is the linked list a palindrome?
  *
@@ -33,41 +36,5 @@ public class C2E7Solution {
         }
 
         return true;
-    }
-
-    private static class LinkedStack {
-        SingleLinkedNode top = null;
-        int size = 0;
-
-        public Integer peek() {
-            if ( top == null ) {
-                return null;
-            }
-
-            return top.element;
-        }
-
-        public Integer pop() {
-            if ( top == null ) {
-                return null;
-            }
-
-            SingleLinkedNode tmp = top;
-            top = top.next;
-            size--;
-            return tmp.element;
-        }
-
-        public boolean push( int element ) {
-            SingleLinkedNode stack = top;
-            top = new SingleLinkedNode( element );
-            top.next = stack;
-            size++;
-            return true;
-        }
-
-        public int size() {
-            return size;
-        }
     }
 }

@@ -1,5 +1,7 @@
 package com.github.yaterz.ctci.cii;
 
+import com.github.yaterz.ctci.SingleLinkedNode;
+
 /**
  * Given two numbers stored in individual linked lists in reverse order
  * add the numbers together and return the result in a new linked list

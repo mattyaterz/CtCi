@@ -1,5 +1,6 @@
 package com.github.yaterz.ctci.cii;
 
+import com.github.yaterz.ctci.SingleLinkedNode;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Test;
@@ -7,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
+import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
 import static org.junit.Assert.assertEquals;
 
 /**
