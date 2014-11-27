@@ -1,7 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
-
 /**
  * Write code to remove duplicates from an unsorted linked list (assuming no temporary buffer/HashSet)
  *
@@ -9,13 +7,13 @@ import com.github.yaterz.ctci.SingleLinkedNode;
  * @since 11/8/14
  */
 public class C2E1Solution {
-    public static void removeDuplicates( SingleLinkedNode first ) {
+    public static void removeDuplicates( LinkedIntNode first ) {
         if ( first == null ) {
             return;
         }
 
-        SingleLinkedNode current = first;
-        SingleLinkedNode runner;
+        LinkedIntNode current = first;
+        LinkedIntNode runner;
 
         while ( current != null ) {
             runner = current;

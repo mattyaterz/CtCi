@@ -1,6 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Assert;
@@ -9,8 +8,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static com.github.yaterz.ctci.LinkedTestUtils.asArray;
-import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asArray;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
 
 /**
  * @author mattyaterz
@@ -20,13 +19,13 @@ import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
     @Parameters public static Collection<Object[]> testData() {
         return Arrays.asList(
             new Object[] {
-                null, null, new SingleLinkedNode( 0 ), new SingleLinkedNode( 0 )
+                null, null, new LinkedIntNode( 0 ), new LinkedIntNode( 0 )
             },
             new Object[] {
-                null, new SingleLinkedNode( 1 ), new SingleLinkedNode( 1 ), new SingleLinkedNode( 1 )
+                null, new LinkedIntNode( 1 ), new LinkedIntNode( 1 ), new LinkedIntNode( 1 )
             },
             new Object[] {
-                new SingleLinkedNode( 2 ), null, new SingleLinkedNode( 2 ), new SingleLinkedNode( 2 )
+                new LinkedIntNode( 2 ), null, new LinkedIntNode( 2 ), new LinkedIntNode( 2 )
             },
             new Object[] {
                 asLinkedList( 7, 1, 6 ), asLinkedList( 5, 9, 2 ),
@@ -39,7 +38,7 @@ import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
         );
     }
 
-    public C2E5Test( SingleLinkedNode first, SingleLinkedNode second, SingleLinkedNode reverse, SingleLinkedNode forward ) {
+    public C2E5Test( LinkedIntNode first, LinkedIntNode second, LinkedIntNode reverse, LinkedIntNode forward ) {
         this.first = first;
         this.second = second;
         this.reverse = reverse;
@@ -56,8 +55,8 @@ import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
                                   asArray( C2E5Solution.addForward( first, second ) ) );
     }
 
-    SingleLinkedNode first;
-    SingleLinkedNode second;
-    SingleLinkedNode reverse;
-    SingleLinkedNode forward;
+    LinkedIntNode first;
+    LinkedIntNode second;
+    LinkedIntNode reverse;
+    LinkedIntNode forward;
 }

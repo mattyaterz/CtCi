@@ -1,6 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Assert;
@@ -9,8 +8,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static com.github.yaterz.ctci.LinkedTestUtils.asArray;
-import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asArray;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
 
 /**
  * @author mattyaterz
@@ -20,7 +19,7 @@ import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
     @Parameters public static Collection<Object[]> testData() {
         return Arrays.asList(
             new Object[] { null, null },
-            new Object[] { new SingleLinkedNode(), new SingleLinkedNode() },
+            new Object[] { new LinkedIntNode(), new LinkedIntNode() },
             new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
                            asLinkedList( 0, 1, 2, 3, 4 ) },
             new Object[] { asLinkedList( 0, 0, 1, 2, 3 ),
@@ -38,7 +37,7 @@ import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
         );
     }
 
-    public C2E1Test( SingleLinkedNode input, SingleLinkedNode output ) {
+    public C2E1Test( LinkedIntNode input, LinkedIntNode output ) {
         this.input = input;
         this.output = output;
     }
@@ -48,6 +47,6 @@ import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
         Assert.assertArrayEquals( asArray( output ), asArray( input ) );
     }
 
-    SingleLinkedNode input;
-    SingleLinkedNode output;
+    LinkedIntNode input;
+    LinkedIntNode output;
 }

@@ -1,7 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
-
 /**
  * Find the kth to last element in a singly linked list
  *
@@ -9,8 +7,8 @@ import com.github.yaterz.ctci.SingleLinkedNode;
  * @since 11/8/14
  */
 public class C2E2Solution {
-    public static SingleLinkedNode getFromEndAt( SingleLinkedNode first, int reverseOffset ) {
-        SingleLinkedNode current = first;
+    public static LinkedIntNode getFromEndAt( LinkedIntNode first, int reverseOffset ) {
+        LinkedIntNode current = first;
         int size = 0;
 
         while ( current != null ) {
@@ -35,7 +33,7 @@ public class C2E2Solution {
         return current;
     }
 
-    public static SingleLinkedNode getFromEndRecursive( SingleLinkedNode node, int reverseOffset ) {
+    public static LinkedIntNode getFromEndRecursive( LinkedIntNode node, int reverseOffset ) {
         if ( node == null ) {
             return null;
         }
@@ -43,13 +41,13 @@ public class C2E2Solution {
         return getPositionFromEnd( node, reverseOffset, new Position( 0 ) );
     }
 
-    static SingleLinkedNode getPositionFromEnd( SingleLinkedNode first, int reverseOffset, Position pos ) {
+    static LinkedIntNode getPositionFromEnd( LinkedIntNode first, int reverseOffset, Position pos ) {
         if ( first == null ) {
             pos.position = -1;
             return null;
         }
 
-        SingleLinkedNode node = getPositionFromEnd( first.next, reverseOffset, pos );
+        LinkedIntNode node = getPositionFromEnd( first.next, reverseOffset, pos );
         pos.position += 1;
 
         if ( pos.position == reverseOffset ) {

@@ -4,7 +4,6 @@ package com.github.yaterz.ctci.cii;
  * @author mattyaterz
  * @since 11/9/14
  */
-import com.github.yaterz.ctci.SingleLinkedNode;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Test;
@@ -13,16 +12,16 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import static com.github.yaterz.ctci.cii.C2E6Solution.findLoop;
-import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
-import static com.github.yaterz.ctci.LinkedTestUtils.asLoopedList;
-import static com.github.yaterz.ctci.LinkedTestUtils.getAtIndex;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asLoopedList;
+import static com.github.yaterz.ctci.cii.C2TestUtils.getAtIndex;
 import static org.junit.Assert.assertEquals;
 
 @RunWith( Parameterized.class ) public class C2E6Test {
     @Parameters public static Collection<Object[]> testData() {
-        SingleLinkedNode first = asLoopedList( 0, 0, 1, 2, 3, 4 );
-        SingleLinkedNode middle = asLoopedList( 2, 0, 1, 2, 3, 4 );
-        SingleLinkedNode last = asLoopedList( 4, 0, 1, 2, 3, 4 );
+        LinkedIntNode first = asLoopedList( 0, 0, 1, 2, 3, 4 );
+        LinkedIntNode middle = asLoopedList( 2, 0, 1, 2, 3, 4 );
+        LinkedIntNode last = asLoopedList( 4, 0, 1, 2, 3, 4 );
 
         return Arrays.asList(
             new Object[] { null, null },
@@ -33,7 +32,7 @@ import static org.junit.Assert.assertEquals;
         );
     }
 
-    public C2E6Test( SingleLinkedNode loop, SingleLinkedNode loopNode ) {
+    public C2E6Test( LinkedIntNode loop, LinkedIntNode loopNode ) {
         this.loop = loop;
         this.loopNode = loopNode;
     }
@@ -42,6 +41,6 @@ import static org.junit.Assert.assertEquals;
         assertEquals( loopNode, findLoop( loop ) );
     }
 
-    SingleLinkedNode loop;
-    SingleLinkedNode loopNode;
+    LinkedIntNode loop;
+    LinkedIntNode loopNode;
 }

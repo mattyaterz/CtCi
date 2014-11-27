@@ -1,7 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
-
 /**
  * Given two numbers stored in individual linked lists in reverse order
  * add the numbers together and return the result in a new linked list
@@ -16,42 +14,42 @@ import com.github.yaterz.ctci.SingleLinkedNode;
  * @since 11/9/14
  */
 public class C2E5Solution {
-    public static SingleLinkedNode addForward( SingleLinkedNode left, SingleLinkedNode right ) {
+    public static LinkedIntNode addForward( LinkedIntNode left, LinkedIntNode right ) {
         if ( left == null || right == null ) {
             return nullCases( left, right );
         }
 
-        SingleLinkedNode sum = new SingleLinkedNode();
+        LinkedIntNode sum = new LinkedIntNode();
 
         for ( long total = getForwardNum( left, 0 ) + getForwardNum( right, 0 ); total > 0; total /= 10 ) {
-            SingleLinkedNode node = sum.next;
-            sum.next = new SingleLinkedNode( (int)( total % 10 ) );
+            LinkedIntNode node = sum.next;
+            sum.next = new LinkedIntNode( (int)( total % 10 ) );
             sum.next.next = node;
         }
 
         return sum.next;
     }
 
-    public static SingleLinkedNode addReverse( SingleLinkedNode left, SingleLinkedNode right ) {
+    public static LinkedIntNode addReverse( LinkedIntNode left, LinkedIntNode right ) {
         if ( left == null || right == null ) {
             return nullCases( left, right );
         }
 
-        SingleLinkedNode sum = new SingleLinkedNode();
-        SingleLinkedNode node = sum;
+        LinkedIntNode sum = new LinkedIntNode();
+        LinkedIntNode node = sum;
 
         for ( long total = getReverseNum( left, 0 ) + getReverseNum( right, 0 ); total > 0; total /= 10 ) {
-            node.next = new SingleLinkedNode( (int)( total % 10 ) );
+            node.next = new LinkedIntNode( (int)( total % 10 ) );
             node = node.next;
         }
 
         return sum.next;
     }
 
-    static SingleLinkedNode nullCases( SingleLinkedNode left, SingleLinkedNode right ) {
+    static LinkedIntNode nullCases( LinkedIntNode left, LinkedIntNode right ) {
         if ( left == null ) {
             if ( right == null ) {
-                return new SingleLinkedNode( 0 );
+                return new LinkedIntNode( 0 );
             }
 
             return right;
@@ -60,7 +58,7 @@ public class C2E5Solution {
         return left;
     }
 
-    static long getForwardNum( SingleLinkedNode node, int value ) {
+    static long getForwardNum( LinkedIntNode node, int value ) {
         if ( node == null ) {
             return value;
         }
@@ -68,7 +66,7 @@ public class C2E5Solution {
         return getForwardNum( node.next, value * 10 + node.element );
     }
 
-    static long getReverseNum( SingleLinkedNode node, int power ) {
+    static long getReverseNum( LinkedIntNode node, int power ) {
         if ( node == null ) {
             return 0;
         }

@@ -1,6 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Assert;
@@ -9,8 +8,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static com.github.yaterz.ctci.LinkedTestUtils.asArray;
-import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asArray;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
 
 /**
  * @author mattyaterz
@@ -33,7 +32,7 @@ import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
         );
     }
 
-    public C2E4Test( SingleLinkedNode input, int partition, SingleLinkedNode output ) {
+    public C2E4Test( LinkedIntNode input, int partition, LinkedIntNode output ) {
         this.input = input;
         this.partition = partition;
         this.output = output;
@@ -44,8 +43,8 @@ import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
                                   asArray( C2E4Solution.partition( input, partition ) ) );
     }
 
-    SingleLinkedNode input;
+    LinkedIntNode input;
     int partition;
-    SingleLinkedNode output;
+    LinkedIntNode output;
 
 }

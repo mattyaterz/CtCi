@@ -1,6 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Assert;
@@ -9,9 +8,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static com.github.yaterz.ctci.LinkedTestUtils.asArray;
-import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
-import static com.github.yaterz.ctci.LinkedTestUtils.getAtIndex;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asArray;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
+import static com.github.yaterz.ctci.cii.C2TestUtils.getAtIndex;
 
 /**
  * @author mattyaterz
@@ -31,7 +30,7 @@ import static com.github.yaterz.ctci.LinkedTestUtils.getAtIndex;
         );
     }
 
-    public C2E3Test( SingleLinkedNode input, int indexToRemove, SingleLinkedNode output ) {
+    public C2E3Test( LinkedIntNode input, int indexToRemove, LinkedIntNode output ) {
         this.input = input;
         this.indexToRemove = indexToRemove;
         this.output = output;
@@ -42,7 +41,7 @@ import static com.github.yaterz.ctci.LinkedTestUtils.getAtIndex;
         Assert.assertArrayEquals( asArray( output ), asArray( input ) );
     }
 
-    SingleLinkedNode input;
+    LinkedIntNode input;
     int indexToRemove;
-    SingleLinkedNode output;
+    LinkedIntNode output;
 }

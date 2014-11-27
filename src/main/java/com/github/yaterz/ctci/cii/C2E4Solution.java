@@ -1,7 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
-
 /**
  * Partition a linked list around a value X
  * I.e. - the values less than X come before all the values greater than or equal to X
@@ -10,9 +8,9 @@ import com.github.yaterz.ctci.SingleLinkedNode;
  * @since 11/9/14
  */
 public class C2E4Solution {
-    public static SingleLinkedNode partition( SingleLinkedNode head, int partition ) {
-        SingleLinkedNode lower = new SingleLinkedNode();
-        SingleLinkedNode upper = new SingleLinkedNode();
+    public static LinkedIntNode partition( LinkedIntNode head, int partition ) {
+        LinkedIntNode lower = new LinkedIntNode();
+        LinkedIntNode upper = new LinkedIntNode();
 
         while ( head != null ) {
             if ( head.element < partition ) {
@@ -35,11 +33,11 @@ public class C2E4Solution {
         return lower.next;
     }
 
-    static void add( SingleLinkedNode head, int add ) {
+    static void add( LinkedIntNode head, int add ) {
         while ( head.next != null ) {
             head = head.next;
         }
 
-        head.next = new SingleLinkedNode( add );
+        head.next = new LinkedIntNode( add );
     }
 }

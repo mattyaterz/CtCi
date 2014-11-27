@@ -1,7 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
-
 /**
  * Delete a node in the middle of a singly linked list given the node to delete (not the head of the list)
  *
@@ -9,13 +7,13 @@ import com.github.yaterz.ctci.SingleLinkedNode;
  * @since 11/8/14
  */
 public class C2E3Solution {
-    public static void removeNode( SingleLinkedNode node ) {
+    public static void removeNode( LinkedIntNode node ) {
         if ( node == null ) {
             return;
         }
 
         if ( node.next != null ) {
-            SingleLinkedNode next = node.next;
+            LinkedIntNode next = node.next;
             node.next = next.next;
             node.element = next.element;
         }

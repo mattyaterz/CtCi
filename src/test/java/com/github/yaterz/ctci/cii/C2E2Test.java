@@ -1,6 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
 import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Assert;
@@ -9,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
+import static com.github.yaterz.ctci.cii.C2TestUtils.asLinkedList;
 
 /**
  * @author mattyaterz
@@ -20,18 +19,18 @@ import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
         return Arrays.asList(
             new Object[] { null, 0, null },
             new Object[] { null, 1, null },
-            new Object[] { new SingleLinkedNode( 0 ), 0, new SingleLinkedNode( 0 ) },
-            new Object[] { new SingleLinkedNode( 0 ), 2, null },
+            new Object[] { new LinkedIntNode( 0 ), 0, new LinkedIntNode( 0 ) },
+            new Object[] { new LinkedIntNode( 0 ), 2, null },
             new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
-                           2, new SingleLinkedNode( 2 ) },
+                           2, new LinkedIntNode( 2 ) },
             new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
-                           0, new SingleLinkedNode( 4 ) },
+                           0, new LinkedIntNode( 4 ) },
             new Object[] { asLinkedList( 0, 1, 2, 3, 4 ),
-                           4, new SingleLinkedNode( 0 ) }
+                           4, new LinkedIntNode( 0 ) }
         );
     }
 
-    public C2E2Test( SingleLinkedNode list, int reverseOffset, SingleLinkedNode node ) {
+    public C2E2Test( LinkedIntNode list, int reverseOffset, LinkedIntNode node ) {
         this.list = list;
         this.reverseOffset = reverseOffset;
         this.node = node;
@@ -55,7 +54,7 @@ import static com.github.yaterz.ctci.LinkedTestUtils.asLinkedList;
         }
     }
 
-    SingleLinkedNode list;
-    SingleLinkedNode node;
+    LinkedIntNode list;
+    LinkedIntNode node;
     int reverseOffset;
 }

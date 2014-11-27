@@ -1,29 +1,29 @@
-package com.github.yaterz.ctci;
+package com.github.yaterz.ctci.cii;
 
 /**
  * @author mattyaterz
  * @since 11/8/14
  */
-public class LinkedTestUtils {
-    public static SingleLinkedNode asLinkedList( int... array ) {
-        SingleLinkedNode head = new SingleLinkedNode();
-        SingleLinkedNode current = head;
+public class C2TestUtils {
+    public static LinkedIntNode asLinkedList( int... array ) {
+        LinkedIntNode head = new LinkedIntNode();
+        LinkedIntNode current = head;
 
         for ( int value : array ) {
-            current.next = new SingleLinkedNode( value );
+            current.next = new LinkedIntNode( value );
             current = current.next;
         }
 
         return head.next;
     }
 
-    public static SingleLinkedNode asLoopedList( int loopIndex, int... array ) {
-        SingleLinkedNode head = new SingleLinkedNode();
-        SingleLinkedNode current = head;
-        SingleLinkedNode loop = null;
+    public static LinkedIntNode asLoopedList( int loopIndex, int... array ) {
+        LinkedIntNode head = new LinkedIntNode();
+        LinkedIntNode current = head;
+        LinkedIntNode loop = null;
 
         for ( int i = 0; i < array.length; i++ ) {
-            current.next = new SingleLinkedNode( array[ i ] );
+            current.next = new LinkedIntNode( array[ i ] );
 
             if ( i == loopIndex ) {
                 loop = current.next;
@@ -36,12 +36,12 @@ public class LinkedTestUtils {
         return head.next;
     }
 
-    public static Object[] asArray( SingleLinkedNode node ) {
+    public static Object[] asArray( LinkedIntNode node ) {
         if ( node == null ) {
             return new Object[0];
         }
 
-        SingleLinkedNode current = node;
+        LinkedIntNode current = node;
         int size = 0;
 
         while ( current != null ) {
@@ -60,7 +60,7 @@ public class LinkedTestUtils {
         return array;
     }
 
-    public static SingleLinkedNode getAtIndex( SingleLinkedNode list, int offset ) {
+    public static LinkedIntNode getAtIndex( LinkedIntNode list, int offset ) {
         if ( offset == 0 || list == null ) {
             return list;
         }

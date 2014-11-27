@@ -1,7 +1,5 @@
 package com.github.yaterz.ctci.cii;
 
-import com.github.yaterz.ctci.SingleLinkedNode;
-
 /**
  * Given a circular linked list, find the node at the beginning of the loop
  * As per usual, don't just use HashSet
@@ -13,11 +11,11 @@ import com.github.yaterz.ctci.SingleLinkedNode;
  * @since 11/9/14
  */
 public class C2E6Solution {
-    public static SingleLinkedNode findLoop( SingleLinkedNode head ) {
-        SingleLinkedNode current = head;
+    public static LinkedIntNode findLoop( LinkedIntNode head ) {
+        LinkedIntNode current = head;
 
         for ( int i = 0; current != null; i++ ) {
-            SingleLinkedNode runner = head;
+            LinkedIntNode runner = head;
 
             for ( int j = 0; j < i; j++ ) {
                 if ( runner == current ) {
