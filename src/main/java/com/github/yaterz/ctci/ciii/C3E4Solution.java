@@ -15,8 +15,8 @@ package com.github.yaterz.ctci.ciii;
  */
 public class C3E4Solution {
 
-    public static class HanoiTowers {
-        public HanoiTowers( LinkedStack<Comparable> tower ) {
+    public static class HanoiTowers<E extends Comparable<E>> {
+        public HanoiTowers( LinkedStack<E> tower ) {
             this.first = tower;
         }
 
@@ -24,8 +24,8 @@ public class C3E4Solution {
 
         }
 
-        LinkedStack<Comparable> first = new LinkedStack<>();
-        LinkedStack<Comparable> middle = new LinkedStack<>();
-        LinkedStack<Comparable> last = new LinkedStack<>();
+        LinkedStack<E> first = new LinkedStack<>();
+        LinkedStack<E> middle = new LinkedStack<>();
+        LinkedStack<E> last = new LinkedStack<>();
     }
 }

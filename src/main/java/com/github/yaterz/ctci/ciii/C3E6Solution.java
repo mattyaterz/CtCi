@@ -8,15 +8,15 @@ package com.github.yaterz.ctci.ciii;
  * @since 11/23/14
  */
 public class C3E6Solution {
-    public static void sortStack( LinkedStack<Comparable> stack ) {
-        LinkedStack<Comparable> tmpStack = new LinkedStack<>();
+    public static <E extends Comparable<E>> void sortStack( LinkedStack<E> stack ) {
+        LinkedStack<E> tmpStack = new LinkedStack<>();
         int size = stack.size();
 
         for ( int i = 0; i < size - 1; i++ ) {
-            Comparable smallest = stack.pop();
+            E smallest = stack.pop();
 
             for ( int j = i + 1; j < size; j++ ) {
-                Comparable next = stack.pop();
+                E next = stack.pop();
 
                 if ( smallest.compareTo( next ) < 0 ) {
                     tmpStack.push( smallest );
