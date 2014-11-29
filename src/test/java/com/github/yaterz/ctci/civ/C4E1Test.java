@@ -16,6 +16,10 @@ public class C4E1Test {
         assertTrue( isBalanced( null ) );
     }
 
+    @Test public void testOne() {
+        assertTrue( isBalanced( new BinaryTreeNode<>( 1 ) ) );
+    }
+
     @Test public void testPerfectlyBalanced() {
         BinaryTreeNode<Integer> root =
         new BinaryTreeNode<>( 8,
@@ -63,7 +67,7 @@ public class C4E1Test {
         assertTrue( isBalanced( root ) );
     }
 
-    @Test public void testRightToLeftCascase() {
+    @Test public void testRightToLeftCascade() {
         BinaryTreeNode<Integer> root =
         new BinaryTreeNode<>( 16,
             new BinaryTreeNode<>( 8,
