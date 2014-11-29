@@ -13,7 +13,7 @@ import static com.github.yaterz.ctci.civ.VertexState.*;
  * @since 11/28/14
  */
 public class C4E2Solution {
-    public static <E> boolean hasPath( Set<DirectedVertex<E>> graph, DirectedVertex<E> start, DirectedVertex<E> end ) {
+    public static <E> boolean hasPathBFS( Set<DirectedVertex<E>> graph, DirectedVertex<E> start, DirectedVertex<E> end ) {
         if ( graph == null || start == null || end == null || !graph.contains( start ) || !graph.contains( end ) ) {
             return false;
         }
@@ -38,6 +38,34 @@ public class C4E2Solution {
                     edge.state = VISITED;
                     vertexes.offer( edge );
                 }
+            }
+        }
+
+        return false;
+    }
+
+    public static <E> boolean hasPathDFS( Set<DirectedVertex<E>> graph, DirectedVertex<E> start, DirectedVertex<E> end ) {
+        if ( graph == null || start == null || end == null || !graph.contains( start ) || !graph.contains( end ) ) {
+            return false;
+        }
+
+        for ( DirectedVertex<E> vertex : graph ) {
+            vertex.state = UNVISITED;
+        }
+
+        return hasPath( start, end );
+    }
+
+    private static <E> boolean hasPath( DirectedVertex<E> current, DirectedVertex<E> end ) {
+        current.state = VISITED;
+
+        for ( DirectedVertex<E> edge : current.edges ) {
+            if ( edge == end ) {
+                return true;
+            }
+
+            if ( edge != null && edge.state == UNVISITED && hasPath( edge, end ) ) {
+                return true;
             }
         }
 
