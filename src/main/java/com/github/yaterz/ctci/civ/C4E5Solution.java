@@ -12,14 +12,42 @@ public class C4E5Solution {
             return true;
         }
 
-        if ( root.left != null && root.left.element.compareTo( root.element ) > 0 ) {
-            return false;
+        if ( root.left != null) {
+            if ( root.left.element.compareTo( root.element ) >= 0 ) {
+                return false;
+            }
+
+            if ( getMax( root.left ).compareTo( root.element ) >= 0 ) {
+                return false;
+            }
         }
 
-        if ( root.right != null && root.element.compareTo( root.right.element ) > 0 ) {
-            return false;
+        if ( root.right != null ) {
+            if ( root.element.compareTo( root.right.element ) > 0 ) {
+                return false;
+            }
+
+            if ( root.element.compareTo( getMin( root.right ) ) > 0 ) {
+                return false;
+            }
         }
 
         return isBinarySearchTree( root.left ) && isBinarySearchTree( root.right );
+    }
+
+    private static <E extends Comparable<E>> E getMax( BinaryTreeNode<E> root ) {
+        if ( root.right == null ) {
+            return root.element;
+        }
+
+        return getMax( root.right );
+    }
+
+    private static <E extends Comparable<E>> E getMin( BinaryTreeNode<E> root ) {
+        if ( root.left == null ) {
+            return root.element;
+        }
+
+        return getMin( root.left );
     }
 }

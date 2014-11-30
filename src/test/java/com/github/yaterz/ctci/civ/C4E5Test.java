@@ -22,8 +22,16 @@ public class C4E5Test {
         assertTrue( isBinarySearchTree( getTreeFromSortedList( Arrays.asList( 2, 4, 6, 8, 10, 12, 14 ) ) ) );
     }
 
-    @Test public void testNotBST() {
+    @Test public void testBackwardBST() {
         assertFalse( isBinarySearchTree( getTreeFromSortedList( Arrays.asList( 14, 12, 10, 8, 6, 4, 2 ) ) ) );
+    }
+
+    @Test public void testLeftSubTreeLargeMax() {
+        assertFalse( isBinarySearchTree( getTreeFromSortedList( Arrays.asList( 2, 4, 16, 8, 10, 12, 14 ) ) ) );
+    }
+
+    @Test public void testRightSubTreeSmallMin() {
+        assertFalse( isBinarySearchTree( getTreeFromSortedList( Arrays.asList( 2, 4, 6, 8, 0, 12, 14 ) ) ) );
     }
 
     @Test public void testCascadingBST() {
